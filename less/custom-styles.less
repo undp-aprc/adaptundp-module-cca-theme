@@ -1973,3 +1973,55 @@ h1.pane-title, h2.pane-title {
   }
 }
 
+.view-impact-stories-map {
+  .views-exposed-form {
+    display:none;
+  }
+}
+
+#impact-stories-select-icons {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  .impact-story-select-icon {
+    position:relative;
+    border-bottom-width: 5px;
+    border-bottom-color: #FF0000;
+    border-bottom-style: solid;
+    justify-content: center;
+    align-items: center;
+    img {
+
+    }
+    .icon-title {
+      position:absolute;
+      bottom:0;
+      height:25%;
+      background-color: rgba(255,255,255,0.5);
+      width:100%;
+      font-size: 1em;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color:white;
+    }
+  }
+  .impact-story-select-icon.inactive {
+    border-bottom-color: #ccc;
+    img {
+      max-width: 100%;
+      -webkit-filter: grayscale(100%);
+      -moz-filter:    grayscale(100%);
+      -ms-filter:     grayscale(100%);
+      -o-filter:      grayscale(100%);
+      filter: gray;
+    }
+  }
+
+
+
+}
+
