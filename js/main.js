@@ -18,7 +18,9 @@
             });
         }
 
-        setTimeout(masonry, 3000)
+        setTimeout(masonry, 3000);
+
+
 
     });
 })(jQuery);

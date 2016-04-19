@@ -31,3 +31,6 @@ regions[admin_footer]       = Admin Footer
 
 ;-------------- C S S -------------
 stylesheets[all][] = css/main.css
+
+;--------------- Plugins ----------
+plugins[panels][layouts] = templates/layouts
