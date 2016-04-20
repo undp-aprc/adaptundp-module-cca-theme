@@ -40,10 +40,9 @@ function cca_css_alter(&$css) {
 }
 
 function cca_process_node(&$variables) {
-    drupal_add_css(drupal_get_path('theme','cca').'/bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css', array('group' => DRUPAL_THEME));
     // Load jQuery UI tabs on project page
     if($variables['type'] == 'project') {
-
+        drupal_add_css(drupal_get_path('theme','cca').'/bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css', array('group' => DRUPAL_THEME));
     }
 }
 

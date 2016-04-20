@@ -17,6 +17,8 @@ if (theme_get_setting('toggle_favicon')) {
   kpr($favicon);
 } ?>
 <link rel="shortcut icon" type="image/x-icon" href="<?php print $favicon; ?>" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,300italic' rel='stylesheet' type='text/css'>
+
 <?php print $styles; ?>
 <?php print $scripts; ?>
 </head>
