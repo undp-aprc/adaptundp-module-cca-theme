@@ -103,7 +103,7 @@
         <div id="tabs-pane-content" class="col-xs-9">
             <div class="tab-content">
                 <?php if($active_groups['group_summary']):?>
-                    <div id="tab-project-summary" class="tab-pane">
+                    <div id="tab-project-summary" class="tab-pane active">
                         <h4>Project Overview</h4>
                         <div class="row">
                             <div class="col-md-8">
