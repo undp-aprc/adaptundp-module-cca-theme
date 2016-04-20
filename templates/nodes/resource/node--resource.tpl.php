@@ -88,12 +88,11 @@ hide($content['field_download']);
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     <div class="content">
+        <?php if ($content['field_thumbnail']): ?>
         <div class="node-content-left">
-            <?php if ($content['field_thumbnail']): ?>
                 <div class="cover-image">
                     <?php print render($content['field_thumbnail']); ?>
                 </div>
-            <?php endif; ?>
         </div>
         <div class="node-content-right">
             <?php if ($content['field_description']): ?>
@@ -105,8 +104,32 @@ hide($content['field_download']);
                         <?php print render($content['field_download']); ?>
                     </div>
                 <?php endif; ?>
+                <?php if ($content['field_external_link']): ?>
+                    <div class="external-link">
+                        <a href="<?php print($content['field_external_link']['#items'][0]['url']); ?>" target="_blank" class="btn btn-success">Open Resource <span class="glyphicon glyphicon-link"></span></a>
+                    </div>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
+        <?php else: ?>
+        <div>
+            <?php if ($content['field_description']): ?>
+                <div class="details">
+                    <?php print render($content['field_description']); ?>
+                </div>
+                <?php if ($content['field_download']): ?>
+                    <div class="download">
+                        <?php print render($content['field_download']); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if ($content['field_external_link']): ?>
+                    <div class="external-link">
+                        <a href="<?php print($content['field_external_link']['#items'][0]['url']); ?>" target="_blank" class="btn btn-success">Open Resource <span class="glyphicon glyphicon-link"></span></a>
+                    </div>
+                <?php endif; ?>
+            <?php endif; ?>
+        </div>
+        <?php endif; ?>
     </div>
     <?php if ($view_mode == 'full'): ?>
         <div class="node-content-bottom"<?php print $content_attributes; ?>>
