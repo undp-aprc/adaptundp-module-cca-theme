@@ -112,7 +112,7 @@ hide($content['field_download']);
         <div class="node-content-bottom"<?php print $content_attributes; ?>>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3>More Information</h3>
+                    <h5>More Information</h5>
                 </div>
                 <div class="panel-body">
                     <?php print(render($content)); ?>
