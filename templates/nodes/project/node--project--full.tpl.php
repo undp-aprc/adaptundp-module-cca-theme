@@ -78,119 +78,105 @@
  *
  * @ingroup themeable
  */
+    // We hide the comments and links now so that we can render them later.
+    hide($content['comments']);
+    hide($content['links']);
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <?php print $user_picture; ?>
-
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      ?>
-      <div class="masthead-image-container">
-          <?php print(render($content['field_display_photo'])); ?>
-
-          <?php if ($content['field_project_subtitle']): ?>
-              <?php print(render($content['field_project_subtitle'])); ?>
-          <?php endif; ?>
-      </div>
-      <h2><?php print($title); ?></h2>
-      <div id="tabs">
-        <?php if ($view_mode == 'full'): ?>
-        <ul>
-          <?php if ($active_groups['group_summary']): ?><li><a href="#tab-project-summary">Project Overview</a></li><?php endif;?>
-          <?php if ($active_groups['group_project_details']): ?><li><a href="#tab-project-details">Project Details</a></li><?php endif;?>
-          <?php if ($active_groups['group_news']): ?><li><a href="#tab-news">News & Updates</a></li><?php endif;?>
-          <?php if ($active_groups['group_country_initiatives']): ?><li><a href="#tab-country-initiatives">Country Initiatives</a></li><?php endif;?>
-          <?php if ($active_groups['group_key_results']): ?><li><a href="#tab-key-results">Key Results and Outputs</a></li><?php endif;?>
-          <?php if ($active_groups['group_meetings']): ?><li><a href="#tab-meetings">Programme Meetings and Workshops</a></li><?php endif;?>      
-          <?php if ($active_groups['group_reports']): ?><li><a href="#tab-reports">Reports & Publications</a></li><?php endif;?>
-          <?php if ($active_groups['group_multimedia']): ?><li><a href="#tab-multimedia">Videos & Multimedia</a></li><?php endif;?>
-          <?php if ($active_groups['group_monitoring']): ?><li><a href="#tab-monitoring">Monitoring & Evaluation</a></li><?php endif;?>
-          <?php if ($active_groups['group_links']): ?><li><a href="#tab-links">Links</a></li><?php endif;?>
-          <?php if ($active_groups['group_contacts']): ?><li><a href="#tab-contacts">Contacts</a></li><?php endif;?>
-        </ul>
-        <?php endif; ?>
-          <?php if($active_groups['group_summary']):?>
-              <div id="tab-project-summary" class="container">
-                  <h3>Project Overview</h3>
-                  <div class="row">
-                        <div class="col-md-8">
-                            <?php print(render($content['group_summary'])); ?>
+    <div class="content"<?php print $content_attributes; ?>>
+        <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
+        <div class="col-xs-3">
+            <ul class="nav nav-tabs tabs-left">
+                <?php if ($active_groups['group_summary']): ?><li><a href="#tab-project-summary" data-toggle="tab">Project Overview</a></li><?php endif;?>
+                <?php if ($active_groups['group_project_details']): ?><li><a href="#tab-project-details" data-toggle="tab">Project Details</a></li><?php endif;?>
+                <?php if ($active_groups['group_news']): ?><li><a href="#tab-news" data-toggle="tab">News & Updates</a></li><?php endif;?>
+                <?php if ($active_groups['group_country_initiatives']): ?><li><a href="#tab-country-initiatives" data-toggle="tab">Country Initiatives</a></li><?php endif;?>
+                <?php if ($active_groups['group_key_results']): ?><li><a href="#tab-key-results" data-toggle="tab">Key Results and Outputs</a></li><?php endif;?>
+                <?php if ($active_groups['group_meetings']): ?><li><a href="#tab-meetings" data-toggle="tab">Programme Meetings and Workshops</a></li><?php endif;?>
+                <?php if ($active_groups['group_reports']): ?><li><a href="#tab-reports" data-toggle="tab">Reports & Publications</a></li><?php endif;?>
+                <?php if ($active_groups['group_multimedia']): ?><li><a href="#tab-multimedia" data-toggle="tab">Videos & Multimedia</a></li><?php endif;?>
+                <?php if ($active_groups['group_monitoring']): ?><li><a href="#tab-monitoring" data-toggle="tab">Monitoring & Evaluation</a></li><?php endif;?>
+                <?php if ($active_groups['group_links']): ?><li><a href="#tab-links" data-toggle="tab">Links</a></li><?php endif;?>
+                <?php if ($active_groups['group_contacts']): ?><li><a href="#tab-contacts" data-toggle="tab">Contacts</a></li><?php endif;?>
+            </ul>
+        </div>
+        <div id="tabs-pane-content" class="col-xs-9">
+            <div class="tab-content">
+                <?php if($active_groups['group_summary']):?>
+                    <div id="tab-project-summary" class="tab-pane">
+                        <h4>Project Overview</h4>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <?php print(render($content['group_summary'])); ?>
+                            </div>
+                            <div class="col-md-4">
+                                <?php print views_embed_view('partners_block','block', $node->nid); ?>
+                            </div>
                         </div>
-                          <div class="col-md-4">
-                              <?php print views_embed_view('partners_block','block', $node->nid); ?>
-                          </div>
-                  </div>
-              </div>
-          <?php endif; ?>
-          <?php if($active_groups['group_project_details']):?>
-              <div id="tab-project-details">
-                  <h3>Project Details</h3>
-                  <?php print(render($content['group_project_details'])); ?>
-              </div>
-          <?php endif; ?>
-          <?php if($active_groups['group_news']):?>
-              <div id="tab-news">
-                  <h3>News</h3>
-                  <?php print(render($content['group_news'])); ?>
-              </div>
-          <?php endif; ?>
-          <?php if($active_groups['group_country_initiatives']):?>
-              <div id="tab-country-initiatives">
-                  <h3>Country Initiatives</h3>
-                  <?php print(render($content['group_country_initiatives'])); ?>
-              </div>
-          <?php endif; ?>
-          <?php if($active_groups['group_key_results']):?>
-              <div id="tab-key-results">
-                  <h3>Key Results and Outputs</h3>
-                  <?php print(render($content['group_key_results'])); ?>
-              </div>
-          <?php endif; ?>
-          <?php if($active_groups['group_meetings']):?>
-              <div id="tab-meetings">
-                  <h3>Programme Meetings and Workshops</h3>
-                  <?php print(render($content['group_meetings'])); ?>
-              </div>
-          <?php endif; ?>
-          <?php if($active_groups['group_reports']):?>
-              <div id="tab-reports">
-                  <h3>Reports and Publications</h3>
-                  <?php print(render($content['group_reports'])); ?>
-              </div>
-          <?php endif; ?>
-          <?php if($active_groups['group_multimedia']):?>
-              <div id="tab-multimedia">
-                  <h3>Multimedia</h3>
-                  <?php print(render($content['group_multimedia'])); ?>
-              </div>
-          <?php endif; ?>
-          <?php if($active_groups['group_monitoring']):?>
-              <div id="tab-monitoring">
-                  <h3>Monitoring and Evaluation</h3>
-                  <?php print(render($content['group_monitoring'])); ?>
-              </div>
-          <?php endif; ?>
-          <?php if($active_groups['group_links']):?>
-              <div id="tab-links">
-                  <h3>Links</h3>
-                  <?php print(render($content['group_links'])); ?>
-              </div>
-          <?php endif; ?>
-          <?php if($active_groups['group_contacts']):?>
-              <div id="tab-contacts">
-                  <h3>Contacts</h3>
-                  <?php print(render($content['group_contacts'])); ?>
-              </div>
-          <?php endif; ?>
-      </div>
-  </div>
-
-  <?php print render($content['links']); ?>
-
-  <?php print render($content['comments']); ?>
-
+                    </div>
+                <?php endif; ?>
+                <?php if($active_groups['group_project_details']):?>
+                    <div id="tab-project-details" class="tab-pane">
+                        <h3>Project Details</h3>
+                        <?php print(render($content['group_project_details'])); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($active_groups['group_news']):?>
+                    <div id="tab-news" class="tab-pane">
+                        <h3>News</h3>
+                        <?php print(render($content['group_news'])); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($active_groups['group_country_initiatives']):?>
+                    <div id="tab-country-initiatives" class="tab-pane">
+                        <h3>Country Initiatives</h3>
+                        <?php print(render($content['group_country_initiatives'])); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($active_groups['group_key_results']):?>
+                    <div id="tab-key-results" class="tab-pane">
+                        <h3>Key Results and Outputs</h3>
+                        <?php print(render($content['group_key_results'])); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($active_groups['group_meetings']):?>
+                    <div id="tab-meetings" class="tab-pane">
+                        <h3>Programme Meetings and Workshops</h3>
+                        <?php print(render($content['group_meetings'])); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($active_groups['group_reports']):?>
+                    <div id="tab-reports" class="tab-pane">
+                        <h3>Reports and Publications</h3>
+                        <?php print(render($content['group_reports'])); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($active_groups['group_multimedia']):?>
+                    <div id="tab-multimedia" class="tab-pane">
+                        <h3>Multimedia</h3>
+                        <?php print(render($content['group_multimedia'])); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($active_groups['group_monitoring']):?>
+                    <div id="tab-monitoring" class="tab-pane">
+                        <h3>Monitoring and Evaluation</h3>
+                        <?php print(render($content['group_monitoring'])); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($active_groups['group_links']):?>
+                    <div id="tab-links" class="tab-pane">
+                        <h3>Links</h3>
+                        <?php print(render($content['group_links'])); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if($active_groups['group_contacts']):?>
+                    <div id="tab-contacts" class="tab-pane">
+                        <h3>Contacts</h3>
+                        <?php print(render($content['group_contacts'])); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
 </div>
+

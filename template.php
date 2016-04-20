@@ -6,6 +6,9 @@ function cca_page_alter(&$page) {
     //drupal_add_js($theme_path.'/js/plugins/jquery.matchHeight-min.js', array('type'=>'file','scope'=>'footer','every_page'=>TRUE));
     drupal_add_js($theme_path.'/js/vendor/masonry/dist/masonry.pkgd.min.js');
     drupal_add_js($theme_path.'/js/main.js', array('type'=>'file','scope'=>'footer','every_page'=>TRUE));
+    drupal_add_js($theme_path.'/js/vendor/bootstrap/tab.js', array('type'=>'file','scope'=>'footer','every_page'=>TRUE));
+    drupal_add_css(drupal_get_path('theme','cca').'/css/main.css', array('group' => DRUPAL_SYSTEM, 'every_page' => true));
+
     
     /* Make search form and menu blocks available to header template and unset from page array */
     $page['header']['cca_theme_blocks_header']['variables']['search'] =  $page['header']['search_form'];
@@ -39,8 +42,7 @@ function cca_css_alter(&$css) {
 function cca_process_node(&$variables) {
     // Load jQuery UI tabs on project page
     if($variables['type'] == 'project') {
-        drupal_add_library('system','ui.tabs');
-        drupal_add_js(drupal_get_path('theme','cca').'/js/tabs.js');
+        drupal_add_css(drupal_get_path('theme','cca').'/bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css', array('group' => DRUPAL_THEME));
     }
 }
 
