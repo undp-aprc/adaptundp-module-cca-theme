@@ -106,7 +106,7 @@ hide($content['field_download']);
                 <?php endif; ?>
                 <?php if ($content['field_external_link']): ?>
                     <div class="external-link">
-                        <a href="<?php print($content['field_external_link']['#items'][0]['url']); ?>" target="_blank" class="btn btn-success">Open Resource <span class="glyphicon glyphicon-link"></span></a>
+                        <a href="<?php print($content['field_external_link']['#items'][0]['url']); ?>" target="_blank" class="btn btn-success">Open Resource <span class="glyphicon glyphicon-share-alt"></span></a>
                     </div>
                 <?php endif; ?>
             <?php endif; ?>
