@@ -87,7 +87,7 @@
         <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
         <div class="col-xs-3">
             <ul class="nav nav-tabs tabs-left">
-                <?php if ($active_groups['group_summary']): ?><li><a href="#tab-project-summary" data-toggle="tab">Project Overview</a></li><?php endif;?>
+                <?php if ($active_groups['group_summary']): ?><li class="active"><a href="#tab-project-summary" data-toggle="tab">Project Overview</a></li><?php endif;?>
                 <?php if ($active_groups['group_project_details']): ?><li><a href="#tab-project-details" data-toggle="tab">Project Details</a></li><?php endif;?>
                 <?php if ($active_groups['group_news']): ?><li><a href="#tab-news" data-toggle="tab">News & Updates</a></li><?php endif;?>
                 <?php if ($active_groups['group_country_initiatives']): ?><li><a href="#tab-country-initiatives" data-toggle="tab">Country Initiatives</a></li><?php endif;?>
