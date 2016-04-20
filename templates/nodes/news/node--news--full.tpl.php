@@ -127,12 +127,6 @@
     <div class="node-content-right">
 
       <?php print render($content); ?>
-      <div class="panel panel-default">
-        <div class="panel-body">
-            <?php print render($content['field_project']); ?>
-            <?php print render($content['field_region']); ?>
-        </div>
-      </div>
     </div>
   </div>
   <?php if($content['field_contact_details']): ?>
