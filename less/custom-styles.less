@@ -726,11 +726,9 @@ footer:after {
             .cover-image {
                 text-align:center;
                 img {
-                    max-width: 100%;
+                    width: 100%;
                 }
-                padding:@padding-large-horizontal;
-                border-radius: @border-radius-small;
-                margin-bottom:@padding-large-vertical;
+
             }
         }
         .node-content-right {
@@ -739,7 +737,12 @@ footer:after {
         .node-content-bottom {
             margin-top:@padding-large-vertical;
         }
+      .download, .external-link {
+        display: inline-block;
+        margin-top: @padding-large-vertical;
+      }
     }
+
 
     .metadata {
         padding:@padding-large-vertical * 2 @padding-large-horizontal;
@@ -1205,7 +1208,7 @@ footer:after {
         }
     }
     img {
-        max-width:100% !important;
+        width:100% !important;
     }
 }
 

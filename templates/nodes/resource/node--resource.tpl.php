@@ -87,7 +87,7 @@ hide($content['field_download']);
         <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
-    <div class="content">
+    <div class="content row">
         <?php if ($content['field_thumbnail']): ?>
         <div class="node-content-left">
                 <div class="cover-image">
