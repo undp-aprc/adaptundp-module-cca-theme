@@ -1,7 +1,6 @@
 h1, h2, h3, h4 {
   font-weight:200;
-  margin-bottom: dotted 1px #eee;
-
+  color:@blue-102;
 }
 
 @media screen and (max-width:@screen-xs) {
@@ -719,48 +718,27 @@ footer:after {
     }
 }
 
-.node-type-resource {
-    .content {
-        .clearfix();
-        .node-content-left {
-            .make-xs-column(6);
-            .cover-image {
-                text-align:center;
-                img {
-                    width: 100%;
-                }
-
-            }
-        }
-        .node-content-right {
-            .make-xs-column(6);
-        }
-        .node-content-bottom {
-            margin-top:@padding-large-vertical;
-        }
-      .download, .external-link {
-        display: inline-block;
-        margin-top: @padding-large-vertical;
+// Layout for Resource Node page (full)
+.page-node.node-type-resource {
+  .cols-2 {
+    .first-col {
+      .make-md-column(4);
+      img {
+        width:100%;
       }
     }
-
-
-    .metadata {
-        padding:@padding-large-vertical * 2 @padding-large-horizontal;
-        background-color: lighten(@gray-204,10%);
-        border-radius: @border-radius-small;
-        margin-bottom:@padding-large-vertical;
-        .field {
-            margin-bottom: @padding-large-vertical;
-        }
-        .field-label {
-            .make-xs-column(2);
-            padding-left:0;
-        }
-        .field-content {
-            .make-xs-column(10);
-        }
+    .main-col {
+      .make-md-column(8);
     }
+  }
+  .cols-1 {
+    .main-col {
+      .make-md-column(12);
+    }
+  }
+  .bottom-col {
+    margin: @padding-large-vertical 0;
+  }
 }
 
 .node-resource.node-teaser {
@@ -1616,15 +1594,6 @@ h2.pane-title {
 
 .pane-signature-programme-pages-listings {
   //padding:0 @padding-large-horizontal;
-}
-
-.panel-title {
-  background-color:@blue-gray-163;
-  color:@gray-51;
-  text-align: center;
-  margin:0 0 @padding-large-vertical 0;
-  padding:@padding-large-horizontal;
-  border-radius: 5px;
 }
 
 h1.panel-title {

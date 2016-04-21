@@ -80,67 +80,35 @@ hide($content['field_download']);
  *
  * @ingroup themeable
  */
+
+ $layout_mode = (isset($content['field_thumbnail'])) ? 'cols-2' : 'cols-1';
+ $layout_class = (isset($content['field_thumbnail'])) ? ' row' : null;
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-    <?php print render($title_prefix); ?>
-    <?php if (!$page): ?>
-        <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-    <div class="content row">
-        <?php if ($content['field_thumbnail']): ?>
-        <div class="node-content-left">
-                <div class="cover-image">
-                    <?php print render($content['field_thumbnail']); ?>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix <?php print($layout_mode); ?>"<?php print $attributes; ?>>
+        <div class="content<?php print($layout_class); ?>">
+            <?php if(isset($content['field_thumbnail'])): ?>
+                <div class="col first-col">
+                    <?php print(render($content['field_thumbnail'])); ?>
                 </div>
+            <?php endif ;?>
+            <!-- Main column will always be printed. CSS determines column width/position using Bootstrap grid -->
+            <div class="col main-col">
+                <?php print(render($content['field_description']));?>
+                <?php print(render($content['field_download']));?>
+                <!-- Convert this to a theme function/override field template -->
+                <?php if($content['field_external_link']): ;?>
+                    <a href="<?php print($content['field_external_link'][0]['#element']['url']); ?>" class="btn btn-success" target="_blank">View <span class="glyphicon glyphicon-link"></span></a>
+                <?php endif; ?>
+                <!-- end of external link download button -->
+            </div>
+            <div class="clearfix"></div>
         </div>
-        <div class="node-content-right">
-            <?php if ($content['field_description']): ?>
-                <div class="details">
-                    <?php print render($content['field_description']); ?>
-                </div>
-                <?php if ($content['field_download']): ?>
-                    <div class="download">
-                        <?php print render($content['field_download']); ?>
-                    </div>
-                <?php endif; ?>
-                <?php if ($content['field_external_link']): ?>
-                    <div class="external-link">
-                        <a href="<?php print($content['field_external_link']['#items'][0]['url']); ?>" target="_blank" class="btn btn-success">Open Resource <span class="glyphicon glyphicon-share-alt"></span></a>
-                    </div>
-                <?php endif; ?>
-            <?php endif; ?>
-        </div>
-        <?php else: ?>
-        <div>
-            <?php if ($content['field_description']): ?>
-                <div class="details">
-                    <?php print render($content['field_description']); ?>
-                </div>
-                <?php if ($content['field_download']): ?>
-                    <div class="download">
-                        <?php print render($content['field_download']); ?>
-                    </div>
-                <?php endif; ?>
-                <?php if ($content['field_external_link']): ?>
-                    <div class="external-link">
-                        <a href="<?php print($content['field_external_link']['#items'][0]['url']); ?>" target="_blank" class="btn btn-success">Open Resource <span class="glyphicon glyphicon-link"></span></a>
-                    </div>
-                <?php endif; ?>
-            <?php endif; ?>
-        </div>
-        <?php endif; ?>
-    </div>
-    <?php if ($view_mode == 'full'): ?>
-        <div class="node-content-bottom"<?php print $content_attributes; ?>>
+        <div class="col bottom-col">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h5>More Information</h5>
-                </div>
+                <div class="panel-heading">More Information</div>
                 <div class="panel-body">
                     <?php print(render($content)); ?>
                 </div>
             </div>
         </div>
-    <?php endif; ?>
 </div>
