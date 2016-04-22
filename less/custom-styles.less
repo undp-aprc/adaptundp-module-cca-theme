@@ -590,28 +590,23 @@ footer:after {
         }
     }
     #tab-country-initiatives {
-        .field-name-field-project-countries {
-            padding:0;
-            > .field-items > .field-item.odd {
-                background-color: lighten(@gray-204, 10%);
-            }
-            > .field-items > .field-item {
-                padding: @padding-large-vertical @padding-large-horizontal;
-            }
-
-            .country-initiatives {
-                .node-left {
-                    .make-xs-column(3);
-                    padding: 0;
-                    .field {
-                        padding:0;
-                    }
-                }
-                .node-right {
-                    .make-xs-column(9);
-                }
-            }
+        .content {
+          padding:@padding-large-vertical 0;
+          border-bottom: 1px dotted #ccc;
+          min-height: 50px;
         }
+        .content:hover {
+          background-color: #eee;
+        }
+        .node-left {
+          .make-xs-column(4);
+          img {
+            max-width: 100%;
+          }
+        }
+      .node-right {
+        .make-xs-column(8);
+      }
     }
     .masthead-image-container {
       //position:relative;

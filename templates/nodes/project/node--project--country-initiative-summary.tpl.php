@@ -82,13 +82,6 @@ hide($content['links']);
 ?>
 <?php $content['field_region']['#view_mode'] = 'country_and_flag'; ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> country-initiatives clearfix"<?php print $attributes; ?>>
-
-  <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
   <div class="content"<?php print $content_attributes; ?>>
     <?php if($content['country_flag_and_map_entity_view']): ?>
     <div class="node-left">
@@ -96,7 +89,9 @@ hide($content['links']);
     </div>
     <?php endif; ?>
     <div class="node-right">
-      <?php print(render($content)); ?>
+        <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+        <?php print(render($content)); ?>
     </div>
+      <div class="clearfix"></div>
   </div>
 </div>
