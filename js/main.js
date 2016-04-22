@@ -6,7 +6,7 @@
         var windowWidth = $(window).width();
         var containerWidth = $('header > .container').width();
         var leftMarginWidth = (windowWidth - containerWidth) / 2;
-        $('.nav.navbar-nav').css('margin-left',leftMarginWidth);
+        $('header .nav.navbar-nav').css('margin-left',leftMarginWidth);
 
         function masonry() {
             $('.view-display-id-signature_subprogrammes_project_block').masonry({
