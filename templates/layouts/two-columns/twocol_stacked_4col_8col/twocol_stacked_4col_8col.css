@@ -1,41 +1,56 @@
 
-.adminimal-theme .panel-2col-stacked {
+.adminimal-theme .panel-2col-stacked, .page-admin-structure-pages .panel-2col-stacked {
     /*  overflow: hidden;  */
     margin-top: 0;
     padding-top: 0;
 }
 
 .adminimal-theme .panel-2col-stacked .panel-col-top,
-.adminimal-theme .panel-2col-stacked .panel-col-bottom {
+.adminimal-theme .panel-2col-stacked .panel-col-bottom,
+.page-admin-structure-pages .panel-2col-stacked .panel-col-top,
+.page-admin-structure-pages .panel-2col-stacked .panel-col-bottom {
     width: 99.9%;
     clear: both;
 }
 
-.adminimal-theme .panel-2col-stacked .panel-col-top .inside {
+.adminimal-theme .panel-2col-stacked .panel-col-top .inside,
+.page-admin-structure-pages .panel-2col-stacked .panel-col-top .inside {
     margin-bottom: .5em;
 }
 
-.adminimal-theme .panel-2col-stacked .panel-col-first {
+.adminimal-theme .panel-2col-stacked .panel-col-first,
+.page-admin-structure-pages .panel-2col-stacked .panel-col-first
+{
     float: left;
     width: 25%;
 }
-* html .adminimal-theme .panel-2col-stacked .panel-col-first {
+
+* html .adminimal-theme .panel-2col-stacked .panel-col-first,
+* html .page-admin-structure-pages .panel-2col-stacked .panel-col-first
+{
     width: 24.9%;
 }
 
-.adminimal-theme .panel-2col-stacked .panel-col-first .inside {
+.adminimal-theme .panel-2col-stacked .panel-col-first .inside,
+.page-admin-structure-pages .panel-2col-stacked .panel-col-first .inside
+{
     margin: 0 .5em 1em 0;
 }
 
-.adminimal-theme .panel-2col-stacked .panel-col-last {
+.adminimal-theme .panel-2col-stacked .panel-col-last,
+.page-admin-structure-pages .panel-2col-stacked .panel-col-last
+{
     float: left;
     width: 74.9%;
 }
 
-.adminimal-theme .panel-2col-stacked .panel-col-last .inside {
+.adminimal-theme .panel-2col-stacked .panel-col-last .inside,
+.page-admin-structure-pages .panel-2col-stacked .panel-col-last .inside {
     margin: 0 0 1em .5em;
 }
 
-.adminimal-theme .panel-2col-stacked .panel-separator {
+.adminimal-theme .panel-2col-stacked .panel-separator,
+.page-admin-structure-pages .panel-2col-stacked .panel-separator
+{
     margin: 0 0 1em 0;
 }

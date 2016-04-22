@@ -1,7 +1,8 @@
-<div class="cca-page container-fluid">
+<div class="cca-page container">
     <?php print(render($page['header'])); ?> 
     <!-- Content Container -->
     <main>
+        <h1><?php print($title); ?></h1>
         <?php if($messages): ?><?php print $messages; ?><?php endif; ?>
         <?php if($tabs): ?><?php print render($tabs); ?><?php endif; ?>
         <?php if($page['sidebar_first']): ?>
