@@ -7,8 +7,9 @@
         <?php if($page['sidebar_first']): ?>
             <?php print render($page['sidebar_first']); ?>
         <?php endif; ?>
-        <?php hide($content['admin_footer']); ?>
-        <?php print render($page['content']); ?>
+        <div class="container">
+            <?php print render($page['content']); ?>
+        </div>
     </main>
     <!-- End Content Container -->
     <footer>
