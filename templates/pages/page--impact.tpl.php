@@ -1,8 +1,7 @@
-<div class="cca-page container">
-    <?php print(render($page['header'])); ?> 
+<div class="cca-page container-fluid">
+    <?php print(render($page['header'])); ?>
     <!-- Content Container -->
     <main>
-        <h1><?php print($title); ?></h1>
         <?php if($messages): ?><?php print $messages; ?><?php endif; ?>
         <?php if($tabs): ?><?php print render($tabs); ?><?php endif; ?>
         <?php if($page['sidebar_first']): ?>
@@ -13,7 +12,7 @@
     </main>
     <!-- End Content Container -->
     <footer>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-4 left-col">
                     <?php if($page['footer_1']): ?>
