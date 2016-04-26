@@ -121,7 +121,7 @@ function cca_preprocess_page(&$variables) {
 }
 
 function cca_preprocess_page__project(&$variables) {
-    kpr($variables);
+    //kpr($variables);
 }
 
 function cca_preprocess_taxonomy_term(&$variables) {
