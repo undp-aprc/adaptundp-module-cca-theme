@@ -82,7 +82,6 @@
     hide($content['comments']);
     hide($content['links']);
     $partners = views_embed_view('partners_block','block', $node->nid);
-    kpr($partners);
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
     <div class="content"<?php print $content_attributes; ?>>
