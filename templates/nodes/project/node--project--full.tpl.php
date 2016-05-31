@@ -117,61 +117,61 @@
                 <?php endif; ?>
                 <?php if($active_groups['group_project_details']):?>
                     <div id="tab-project-details" class="tab-pane">
-                        <h3>Project Details</h3>
+                        <h2>Project Details</h2>
                         <?php print(render($content['group_project_details'])); ?>
                     </div>
                 <?php endif; ?>
                 <?php if($active_groups['group_news']):?>
                     <div id="tab-news" class="tab-pane">
-                        <h3>News</h3>
+                        <h2>News</h2>
                         <?php print(render($content['group_news'])); ?>
                     </div>
                 <?php endif; ?>
                 <?php if($active_groups['group_country_initiatives']):?>
                     <div id="tab-country-initiatives" class="tab-pane">
-                        <h3>Country Initiatives</h3>
+                        <h2>Country Initiatives</h2>
                         <?php print(render($content['group_country_initiatives'])); ?>
                     </div>
                 <?php endif; ?>
                 <?php if($active_groups['group_key_results']):?>
                     <div id="tab-key-results" class="tab-pane">
-                        <h3>Key Results and Outputs</h3>
+                        <h2>Key Results and Outputs</h2>
                         <?php print(render($content['group_key_results'])); ?>
                     </div>
                 <?php endif; ?>
                 <?php if($active_groups['group_meetings']):?>
                     <div id="tab-meetings" class="tab-pane">
-                        <h3>Programme Meetings and Workshops</h3>
+                        <h2>Programme Meetings and Workshops</h2>
                         <?php print(render($content['group_meetings'])); ?>
                     </div>
                 <?php endif; ?>
                 <?php if($active_groups['group_reports']):?>
                     <div id="tab-reports" class="tab-pane">
-                        <h3>Reports and Publications</h3>
+                        <h2>Reports and Publications</h2>
                         <?php print(render($content['group_reports'])); ?>
                     </div>
                 <?php endif; ?>
                 <?php if($active_groups['group_multimedia']):?>
                     <div id="tab-multimedia" class="tab-pane">
-                        <h3>Multimedia</h3>
+                        <h2>Multimedia</h2>
                         <?php print(render($content['group_multimedia'])); ?>
                     </div>
                 <?php endif; ?>
                 <?php if($active_groups['group_monitoring']):?>
                     <div id="tab-monitoring" class="tab-pane">
-                        <h3>Monitoring and Evaluation</h3>
+                        <h2>Monitoring and Evaluation</h2>
                         <?php print(render($content['group_monitoring'])); ?>
                     </div>
                 <?php endif; ?>
                 <?php if($active_groups['group_links']):?>
                     <div id="tab-links" class="tab-pane">
-                        <h3>Links</h3>
+                        <h2>Links</h2>
                         <?php print(render($content['group_links'])); ?>
                     </div>
                 <?php endif; ?>
                 <?php if($active_groups['group_contacts']):?>
                     <div id="tab-contacts" class="tab-pane">
-                        <h3>Contacts</h3>
+                        <h2>Contacts</h2>
                         <?php print(render($content['group_contacts'])); ?>
                     </div>
                 <?php endif; ?>
