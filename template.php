@@ -91,6 +91,10 @@ function cca_preprocess_node__news(&$variables) {
     if ($variables['field_contact_details'][0]['safe_value'] == '') {
         unset($variables['content']['field_contact_details']);
     }
+    // Format read more links as buttons
+    if ($link = &$variables['content']['links']['node']['#links']['node-readmore']) {
+        $link['attributes']['class'][] = 'btn btn-default';
+    }
 }
 
 function cca_preprocess_node__resource(&$variables) {
