@@ -81,7 +81,7 @@
  */
 ?>
 <div class="col-sm-8 col-xs-height">
-    <a href="/node/<?php print($node->nid); ?>">
+    <a href="<?php print($node_url); ?>">
         <div class="cca-content-box photo-box caption-right primary">
             <div class="row">
                 <div class="col-sm-6">
