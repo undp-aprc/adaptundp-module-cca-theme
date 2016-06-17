@@ -81,15 +81,14 @@
  */
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-    <?php print render($title_prefix); ?>
-    <?php if (!$page): ?>
-        <h3<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-    <?php hide($content['links']); ?>
-    <div class="content"<?php print $content_attributes; ?>>
-        <?php print render($content); ?>
+    <div class="row">
+        <div class="col-xs-2">
+            <?php print(render($content['field_thumbnail'])); ?>
+        </div>
+        <div class="col-xs-10">
+            <?php hide($content['links']); ?>
+            <?php print render($content); ?>
+        </div>
     </div>
-
+    <div class="clearfix"></div>
 </div>
