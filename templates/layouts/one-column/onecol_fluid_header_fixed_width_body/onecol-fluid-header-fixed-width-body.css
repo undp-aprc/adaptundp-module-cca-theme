@@ -39,3 +39,16 @@
 .adminimal-theme .panel-2col-stacked .panel-separator {
     margin: 0 0 1em 0;
 }
+
+.ui-widget-content {
+    border:0;
+}
+
+.ui-widget-header {
+    background: #a3bccc;
+    border-radius:0;
+}
+
+.ui-tabs-nav a {
+    background-color: #036;
+}

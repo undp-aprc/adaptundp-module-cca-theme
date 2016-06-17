@@ -16,7 +16,7 @@
     <div class="panel-panel panel-col-top">
         <div><?php print $content['top']; ?></div>
     </div>
-    <div class="panel-panel panel-col-middle container">
+    <div class="panel-panel panel-col-middle">
         <div><?php print $content['middle']; ?></div>
     </div>
     <div class="panel-panel panel-col-bottom">
