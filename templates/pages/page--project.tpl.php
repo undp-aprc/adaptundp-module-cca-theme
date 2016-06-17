@@ -14,7 +14,6 @@
                 <?php print render($page['sidebar_first']); ?>
             <?php endif; ?>
             <?php hide($content['admin_footer']); ?>
-            <h1><?php print($title); ?></h1>
             <?php print render($page['content']); ?>
         </div>
     </main>

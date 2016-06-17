@@ -83,8 +83,7 @@
 
     <div class="content project-masthead"<?php print $content_attributes; ?>>
         <div class="title-row">
-            <div class="col-xs-1"><a href="<?php print($node_url); ?>"><img src="/sites/all/themes/custom/cca/img/ux-icons/icon-home.svg" alt="Project Home"/></a></div>
-            <div class="col-xs-11"><h2<?php print $title_attributes; ?>><?php print $title; ?></h2></div>
+            <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
         </div>
 
         <?php
