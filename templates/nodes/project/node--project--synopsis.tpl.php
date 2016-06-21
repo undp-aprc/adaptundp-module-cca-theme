@@ -8,7 +8,11 @@
                 <?php print(render($content['field_project_about_summary'])); ?>
             </div>
             <div class="map col-xs-4">
-                <?php print(render($content['field_coordinates'])); ?>
+                <div class="panel panel-default">
+                    <?php print(render($content['field_coordinates'])); ?>
+                    <div class="panel-footer"><p class="small-label">Project Location</div>
+                </div>
+
             </div>
         </div>
     </div>
