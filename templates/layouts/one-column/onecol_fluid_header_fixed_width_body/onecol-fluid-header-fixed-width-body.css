@@ -45,10 +45,12 @@
 }
 
 .ui-widget-header {
-    background: #a3bccc;
+    background: none;
     border-radius:0;
+    border:0;
+    border-bottom: 1px solid #aaa;
 }
 
-.ui-tabs-nav a {
-    background-color: #036;
+.ui-tabs .ui-tabs-panel {
+    padding:10px 0;
 }
