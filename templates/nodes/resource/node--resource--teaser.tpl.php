@@ -88,6 +88,7 @@
         <div class="col-xs-10">
             <?php hide($content['links']); ?>
             <?php print render($content); ?>
+            <?php print render($content['links']); ?>
         </div>
     </div>
     <div class="clearfix"></div>

@@ -101,6 +101,10 @@ function cca_preprocess_node__resource(&$variables) {
     if ($variables['content']['field_download']) {
         $variables['content']['field_download']['#theme'] = 'download_button';
     }
+    if ($variables['view_mode'] == 'teaser' && $variables['content']['links']['node']['#links']['node-readmore']['attributes']) { // If there's a read more link for this content
+
+        $variables['content']['links']['node']['#links']['node-readmore']['attributes']['class'] = array('btn', 'btn-default'); // Format it as a button
+    }
 }
 
 function cca_preprocess_page(&$variables) {
@@ -497,6 +501,7 @@ function cca_preprocess_views_view(&$variables) {
 }
 
 function cca_date_display_range($variables) {
+    kpr($variables);
     $date1 = $variables['date1'];
     $date2 = $variables['date2'];
     $timezone = $variables['timezone'];
