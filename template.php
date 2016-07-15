@@ -47,7 +47,7 @@ function cca_process_node(&$variables) {
 }
 
 function cca_preprocess_node(&$variables) {
-    if ($variables['type'] == 'project' || $variables['type'] == 'news' || $variables['type'] == 'resource' || $variables['type'] == 'event' || $variables['type'] == 'page') {
+    if ($variables['type'] == 'project' || $variables['type'] == 'news' || $variables['type'] == 'resource' || $variables['type'] == 'event' || $variables['type'] == 'page' || $variables['type'] == 'group_spaces') {
         $function = 'cca_preprocess_node__'.$variables['type'];
         if (function_exists($function)) {
             $function($variables);
@@ -105,6 +105,10 @@ function cca_preprocess_node__resource(&$variables) {
 
         $variables['content']['links']['node']['#links']['node-readmore']['attributes']['class'] = array('btn', 'btn-default'); // Format it as a button
     }
+}
+
+function cca_preprocess_node__group_spaces(&$variables) {
+    drupal_add_library('system', 'ui.tabs');
 }
 
 function cca_preprocess_page(&$variables) {

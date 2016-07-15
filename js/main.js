@@ -20,6 +20,29 @@
 
         setTimeout(masonry, 3000);
 
+        /* Custom JS for NAP project page */
+        var pageHeight = $('#main .page-width').height();
+        $('#sidebar-first').height(pageHeight);
+
+        /* Init jquery tabs on groups page */
+        $('#contentTabsEnglish').tabs();
+        $('#contentTabsFrench').tabs();
+
+        $('.switch-language').click(function(event) {
+            var data = $(this).data();
+            $('.switch-language').removeClass('active');
+            $(this).addClass('active');
+            switch (data.language) {
+                case 'english':
+                    $('.contentTabs').removeClass('show');
+                    $('#contentTabsEnglish').addClass('show');
+                    break;
+                case 'french':
+                    $('.contentTabs').removeClass('show');
+                    $('#contentTabsFrench').addClass('show');
+            }
+        });
+
 
 
     });
