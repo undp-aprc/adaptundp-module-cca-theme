@@ -505,7 +505,6 @@ function cca_preprocess_views_view(&$variables) {
 }
 
 function cca_date_display_range($variables) {
-    kpr($variables);
     $date1 = $variables['date1'];
     $date2 = $variables['date2'];
     $timezone = $variables['timezone'];
