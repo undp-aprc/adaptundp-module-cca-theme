@@ -92,7 +92,7 @@
 
   <?php if ($display_submitted): ?>
     <div class="submitted">
-      <?php print $submitted; ?>
+      <p class="datestamp"><?php print $submitted; ?></p>
     </div>
   <?php endif; ?>
 
