@@ -88,6 +88,7 @@ function cca_preprocess_node__page(&$variables) {
 }
 
 function cca_preprocess_node__news(&$variables) {
+    $variables['submitted'] = format_date($variables['changed'], 'short');
     if ($variables['field_contact_details'][0]['safe_value'] == '') {
         unset($variables['content']['field_contact_details']);
     }
@@ -98,6 +99,7 @@ function cca_preprocess_node__news(&$variables) {
 }
 
 function cca_preprocess_node__resource(&$variables) {
+    $variables['submitted'] = format_date($variables['changed'], 'short');
     if ($variables['content']['field_download']) {
         $variables['content']['field_download']['#theme'] = 'download_button';
     }

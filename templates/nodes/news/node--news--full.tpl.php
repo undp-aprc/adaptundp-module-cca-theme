@@ -98,12 +98,7 @@
   }(document, 'script', 'facebook-jssdk'));</script>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php print $user_picture; ?>
-  <?php if ($display_submitted): ?>
-    <div class="submitted">
-      <?php print $submitted; ?>
-    </div>
-  <?php endif; ?>
-
+  
   <div class="content"<?php print $content_attributes; ?>>
     <?php if($content['field_photo']): ?>
       <div class="node-content-left">

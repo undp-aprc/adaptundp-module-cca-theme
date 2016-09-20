@@ -86,6 +86,11 @@
             <?php print(render($content['field_thumbnail'])); ?>
         </div>
         <div class="col-xs-10">
+            <?php if ($display_submitted): ?>
+                <div class="submitted">
+                    <p class="datestamp"><?php print $submitted; ?></p>
+                </div>
+            <?php endif; ?>
             <?php hide($content['links']); ?>
             <?php print render($content); ?>
             <?php print render($content['links']); ?>
