@@ -47,12 +47,16 @@ function cca_process_node(&$variables) {
 }
 
 function cca_preprocess_node(&$variables) {
-    if ($variables['type'] == 'project' || $variables['type'] == 'news' || $variables['type'] == 'resource' || $variables['type'] == 'event' || $variables['type'] == 'page' || $variables['type'] == 'group_spaces') {
+    if ($variables['type'] == 'project' || $variables['type'] == 'news' || $variables['type'] == 'resource' || $variables['type'] == 'event' || $variables['type'] == 'page' || $variables['type'] == 'group_spaces' || $variables['type' == 'content_canvas']) {
         $function = 'cca_preprocess_node__'.$variables['type'];
         if (function_exists($function)) {
             $function($variables);
         }
     }
+}
+
+function cca_preprocess_node__content_canvas(&$variables) {
+    drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js', array('type'=>'external', 'group'=>JS_THEME));
 }
 
 function cca_preprocess_node__event(&$variables) {
