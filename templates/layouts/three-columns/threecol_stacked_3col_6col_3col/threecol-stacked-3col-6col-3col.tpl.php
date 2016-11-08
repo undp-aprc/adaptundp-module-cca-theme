@@ -19,9 +19,11 @@
 ?>
 <div class="panel-display panel-3col-stacked clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
     <?php if ($content['top']): ?>
+    <div class="row">
         <div class="col panel-col-top col-sm-12">
             <?php print $content['top']; ?>
         </div>
+    </div>
     <?php endif ?>
 
     <div class="center-wrapper row">
