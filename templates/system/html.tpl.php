@@ -10,7 +10,6 @@
 <meta property="og:image" content="http://www.adaptation-undp.org/sites/default/files/uploads/homepage-thumbnail.jpg" />
 <title><?php print $head_title; ?></title>
 <?php
-
 if (theme_get_setting('toggle_favicon')) {
   $favicon = theme_get_setting('favicon');
 } else {

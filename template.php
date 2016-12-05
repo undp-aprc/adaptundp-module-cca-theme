@@ -1,5 +1,4 @@
 <?php
-
 function cca_page_alter(&$page) {
     $theme_path = drupal_get_path('theme','cca');
     /* Add global JS files */
