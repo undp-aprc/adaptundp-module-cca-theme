@@ -18,6 +18,7 @@ if (theme_get_setting('toggle_favicon')) {
 } ?>
 <link rel="shortcut icon" type="image/x-icon" href="<?php print $favicon; ?>" />
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,300italic' rel='stylesheet' type='text/css'>
+<script src="https://use.fontawesome.com/e0d6fc2342.js"></script>
 
 <?php print $styles; ?>
 <?php print $scripts; ?>
