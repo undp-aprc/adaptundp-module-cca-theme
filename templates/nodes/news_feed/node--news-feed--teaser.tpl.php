@@ -85,7 +85,7 @@
 
   <?php print render($title_prefix); ?>
       <?php if($content['field_external_link']): ?>
-          <h2<?php print $title_attributes; ?>><a href="<?php print $content['field_external_link'][0]['#element']['url']; ?>"><?php print $title; ?></a></h2>
+          <h2<?php print $title_attributes; ?>><a target="_blank" href="<?php print $content['field_external_link'][0]['#element']['url']; ?>"><?php print $title; ?></a></h2>
       <?php else: ?>
           <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
       <?php endif; ?>
@@ -96,7 +96,7 @@
     <p><i><?php print(render($content['field_publication_date'])); ?></i></p>
     <p><?php print(render($content['body'])); ?></p>
     <?php if($content['field_external_link']): ?>
-      <a class="btn btn-default" href="<?php print $content['field_external_link'][0]['#element']['url']; ?>">Read Article</a>
+      <a class="btn btn-default" href="<?php print $content['field_external_link'][0]['#element']['url']; ?>" target="_blank">Read Article</a>
     <?php endif; ?>
     <?php
       // We hide the comments and links now so that we can render them later.
