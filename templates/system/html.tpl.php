@@ -32,7 +32,5 @@ if (theme_get_setting('toggle_favicon')) {
     print $page;
     print $page_bottom;
   ?>
-  <script src="//use.typekit.net/azx2jrq.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
 </body>
 </html>
