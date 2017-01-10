@@ -1,7 +1,7 @@
 <?php
-    
+
 ?>
-<div class="col-sm-4 col-xs-height">
+<div class="col-sm-4 col-xs-height masonry-item">
         <a href="<?php print($node_url); ?>">
             <div class="cca-content-box photo-box caption-bottom primary">
                 <?php print render($content['field_photo']); ?>
