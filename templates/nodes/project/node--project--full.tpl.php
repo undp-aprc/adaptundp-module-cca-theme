@@ -87,7 +87,7 @@
     <div class="content row"<?php print $content_attributes; ?>>
         <div class="col-xs-3">
             <ul class="nav nav-tabs tabs-left">
-                <?php if ($active_groups['group_summary']): ?><li class="active"><a href="#tab-project-summary" data-toggle="tab">Project Overview</a></li><?php endif;?>
+                <?php if ($active_groups['group_summary']): ?><li class="active"><a href="#tab-project-summary" data-toggle="tab">Introduction</a></li><?php endif;?>
                 <?php if ($active_groups['group_project_details']): ?><li><a href="#tab-project-details" data-toggle="tab">Project Details</a></li><?php endif;?>
                 <?php if ($active_groups['group_news']): ?><li><a href="#tab-news" data-toggle="tab">News & Updates</a></li><?php endif;?>
                 <?php if ($active_groups['group_country_initiatives']): ?><li><a href="#tab-country-initiatives" data-toggle="tab">Country Initiatives</a></li><?php endif;?>
@@ -104,7 +104,7 @@
             <div class="tab-content">
                 <?php if($active_groups['group_summary']):?>
                     <div id="tab-project-summary" class="tab-pane active">
-                        <h4>Project Overview</h4>
+                        <h4>Introduction</h4>
                         <div class="row">
                             <div class="col-md-8">
                                 <?php print(render($content['group_summary'])); ?>
